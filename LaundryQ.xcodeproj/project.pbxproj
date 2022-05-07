@@ -1,0 +1,624 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6029D9A5282613BA00F04FCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6029D9A4282613BA00F04FCB /* AppDelegate.swift */; };
+		6029D9A7282613BA00F04FCB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6029D9A6282613BA00F04FCB /* SceneDelegate.swift */; };
+		6029D9A9282613BA00F04FCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6029D9A8282613BA00F04FCB /* ViewController.swift */; };
+		6029D9AC282613BA00F04FCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6029D9AA282613BA00F04FCB /* Main.storyboard */; };
+		6029D9AF282613BA00F04FCB /* LaundryQ.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6029D9AD282613BA00F04FCB /* LaundryQ.xcdatamodeld */; };
+		6029D9B1282613BC00F04FCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6029D9B0282613BC00F04FCB /* Assets.xcassets */; };
+		6029D9B4282613BC00F04FCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6029D9B2282613BC00F04FCB /* LaunchScreen.storyboard */; };
+		6029D9BF282613BC00F04FCB /* LaundryQTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6029D9BE282613BC00F04FCB /* LaundryQTests.swift */; };
+		6029D9C9282613BC00F04FCB /* LaundryQUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6029D9C8282613BC00F04FCB /* LaundryQUITests.swift */; };
+		6029D9CB282613BC00F04FCB /* LaundryQUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6029D9CA282613BC00F04FCB /* LaundryQUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6029D9BB282613BC00F04FCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6029D999282613B900F04FCB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6029D9A0282613BA00F04FCB;
+			remoteInfo = LaundryQ;
+		};
+		6029D9C5282613BC00F04FCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6029D999282613B900F04FCB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6029D9A0282613BA00F04FCB;
+			remoteInfo = LaundryQ;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6029D9A1282613BA00F04FCB /* LaundryQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaundryQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6029D9A4282613BA00F04FCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6029D9A6282613BA00F04FCB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6029D9A8282613BA00F04FCB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6029D9AB282613BA00F04FCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6029D9AE282613BA00F04FCB /* LaundryQ.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LaundryQ.xcdatamodel; sourceTree = "<group>"; };
+		6029D9B0282613BC00F04FCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6029D9B3282613BC00F04FCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6029D9B5282613BC00F04FCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6029D9BA282613BC00F04FCB /* LaundryQTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaundryQTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6029D9BE282613BC00F04FCB /* LaundryQTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryQTests.swift; sourceTree = "<group>"; };
+		6029D9C4282613BC00F04FCB /* LaundryQUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaundryQUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6029D9C8282613BC00F04FCB /* LaundryQUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryQUITests.swift; sourceTree = "<group>"; };
+		6029D9CA282613BC00F04FCB /* LaundryQUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryQUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6029D99E282613BA00F04FCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6029D9B7282613BC00F04FCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6029D9C1282613BC00F04FCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6029D998282613B900F04FCB = {
+			isa = PBXGroup;
+			children = (
+				6029D9A3282613BA00F04FCB /* LaundryQ */,
+				6029D9BD282613BC00F04FCB /* LaundryQTests */,
+				6029D9C7282613BC00F04FCB /* LaundryQUITests */,
+				6029D9A2282613BA00F04FCB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6029D9A2282613BA00F04FCB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6029D9A1282613BA00F04FCB /* LaundryQ.app */,
+				6029D9BA282613BC00F04FCB /* LaundryQTests.xctest */,
+				6029D9C4282613BC00F04FCB /* LaundryQUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6029D9A3282613BA00F04FCB /* LaundryQ */ = {
+			isa = PBXGroup;
+			children = (
+				6029D9A4282613BA00F04FCB /* AppDelegate.swift */,
+				6029D9A6282613BA00F04FCB /* SceneDelegate.swift */,
+				6029D9A8282613BA00F04FCB /* ViewController.swift */,
+				6029D9AA282613BA00F04FCB /* Main.storyboard */,
+				6029D9B0282613BC00F04FCB /* Assets.xcassets */,
+				6029D9B2282613BC00F04FCB /* LaunchScreen.storyboard */,
+				6029D9B5282613BC00F04FCB /* Info.plist */,
+				6029D9AD282613BA00F04FCB /* LaundryQ.xcdatamodeld */,
+			);
+			path = LaundryQ;
+			sourceTree = "<group>";
+		};
+		6029D9BD282613BC00F04FCB /* LaundryQTests */ = {
+			isa = PBXGroup;
+			children = (
+				6029D9BE282613BC00F04FCB /* LaundryQTests.swift */,
+			);
+			path = LaundryQTests;
+			sourceTree = "<group>";
+		};
+		6029D9C7282613BC00F04FCB /* LaundryQUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6029D9C8282613BC00F04FCB /* LaundryQUITests.swift */,
+				6029D9CA282613BC00F04FCB /* LaundryQUITestsLaunchTests.swift */,
+			);
+			path = LaundryQUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6029D9A0282613BA00F04FCB /* LaundryQ */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6029D9CE282613BC00F04FCB /* Build configuration list for PBXNativeTarget "LaundryQ" */;
+			buildPhases = (
+				6029D99D282613BA00F04FCB /* Sources */,
+				6029D99E282613BA00F04FCB /* Frameworks */,
+				6029D99F282613BA00F04FCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LaundryQ;
+			productName = LaundryQ;
+			productReference = 6029D9A1282613BA00F04FCB /* LaundryQ.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6029D9B9282613BC00F04FCB /* LaundryQTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6029D9D1282613BC00F04FCB /* Build configuration list for PBXNativeTarget "LaundryQTests" */;
+			buildPhases = (
+				6029D9B6282613BC00F04FCB /* Sources */,
+				6029D9B7282613BC00F04FCB /* Frameworks */,
+				6029D9B8282613BC00F04FCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6029D9BC282613BC00F04FCB /* PBXTargetDependency */,
+			);
+			name = LaundryQTests;
+			productName = LaundryQTests;
+			productReference = 6029D9BA282613BC00F04FCB /* LaundryQTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6029D9C3282613BC00F04FCB /* LaundryQUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6029D9D4282613BC00F04FCB /* Build configuration list for PBXNativeTarget "LaundryQUITests" */;
+			buildPhases = (
+				6029D9C0282613BC00F04FCB /* Sources */,
+				6029D9C1282613BC00F04FCB /* Frameworks */,
+				6029D9C2282613BC00F04FCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6029D9C6282613BC00F04FCB /* PBXTargetDependency */,
+			);
+			name = LaundryQUITests;
+			productName = LaundryQUITests;
+			productReference = 6029D9C4282613BC00F04FCB /* LaundryQUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6029D999282613B900F04FCB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					6029D9A0282613BA00F04FCB = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					6029D9B9282613BC00F04FCB = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 6029D9A0282613BA00F04FCB;
+					};
+					6029D9C3282613BC00F04FCB = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 6029D9A0282613BA00F04FCB;
+					};
+				};
+			};
+			buildConfigurationList = 6029D99C282613B900F04FCB /* Build configuration list for PBXProject "LaundryQ" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6029D998282613B900F04FCB;
+			productRefGroup = 6029D9A2282613BA00F04FCB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6029D9A0282613BA00F04FCB /* LaundryQ */,
+				6029D9B9282613BC00F04FCB /* LaundryQTests */,
+				6029D9C3282613BC00F04FCB /* LaundryQUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6029D99F282613BA00F04FCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6029D9B4282613BC00F04FCB /* LaunchScreen.storyboard in Resources */,
+				6029D9B1282613BC00F04FCB /* Assets.xcassets in Resources */,
+				6029D9AC282613BA00F04FCB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6029D9B8282613BC00F04FCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6029D9C2282613BC00F04FCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6029D99D282613BA00F04FCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6029D9A9282613BA00F04FCB /* ViewController.swift in Sources */,
+				6029D9AF282613BA00F04FCB /* LaundryQ.xcdatamodeld in Sources */,
+				6029D9A5282613BA00F04FCB /* AppDelegate.swift in Sources */,
+				6029D9A7282613BA00F04FCB /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6029D9B6282613BC00F04FCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6029D9BF282613BC00F04FCB /* LaundryQTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6029D9C0282613BC00F04FCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6029D9CB282613BC00F04FCB /* LaundryQUITestsLaunchTests.swift in Sources */,
+				6029D9C9282613BC00F04FCB /* LaundryQUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6029D9BC282613BC00F04FCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6029D9A0282613BA00F04FCB /* LaundryQ */;
+			targetProxy = 6029D9BB282613BC00F04FCB /* PBXContainerItemProxy */;
+		};
+		6029D9C6282613BC00F04FCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6029D9A0282613BA00F04FCB /* LaundryQ */;
+			targetProxy = 6029D9C5282613BC00F04FCB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6029D9AA282613BA00F04FCB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6029D9AB282613BA00F04FCB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6029D9B2282613BC00F04FCB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6029D9B3282613BC00F04FCB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6029D9CC282613BC00F04FCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6029D9CD282613BC00F04FCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6029D9CF282613BC00F04FCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CX7FZRKX24;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LaundryQ/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nurulsriandaputri.LaundryQ;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6029D9D0282613BC00F04FCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CX7FZRKX24;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LaundryQ/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nurulsriandaputri.LaundryQ;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6029D9D2282613BC00F04FCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CX7FZRKX24;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nurulsriandaputri.LaundryQTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LaundryQ.app/LaundryQ";
+			};
+			name = Debug;
+		};
+		6029D9D3282613BC00F04FCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CX7FZRKX24;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nurulsriandaputri.LaundryQTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LaundryQ.app/LaundryQ";
+			};
+			name = Release;
+		};
+		6029D9D5282613BC00F04FCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CX7FZRKX24;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nurulsriandaputri.LaundryQUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LaundryQ;
+			};
+			name = Debug;
+		};
+		6029D9D6282613BC00F04FCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CX7FZRKX24;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nurulsriandaputri.LaundryQUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LaundryQ;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6029D99C282613B900F04FCB /* Build configuration list for PBXProject "LaundryQ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6029D9CC282613BC00F04FCB /* Debug */,
+				6029D9CD282613BC00F04FCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6029D9CE282613BC00F04FCB /* Build configuration list for PBXNativeTarget "LaundryQ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6029D9CF282613BC00F04FCB /* Debug */,
+				6029D9D0282613BC00F04FCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6029D9D1282613BC00F04FCB /* Build configuration list for PBXNativeTarget "LaundryQTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6029D9D2282613BC00F04FCB /* Debug */,
+				6029D9D3282613BC00F04FCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6029D9D4282613BC00F04FCB /* Build configuration list for PBXNativeTarget "LaundryQUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6029D9D5282613BC00F04FCB /* Debug */,
+				6029D9D6282613BC00F04FCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6029D9AD282613BA00F04FCB /* LaundryQ.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6029D9AE282613BA00F04FCB /* LaundryQ.xcdatamodel */,
+			);
+			currentVersion = 6029D9AE282613BA00F04FCB /* LaundryQ.xcdatamodel */;
+			path = LaundryQ.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 6029D999282613B900F04FCB /* Project object */;
+}
