@@ -1,24 +1,456 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CqQ-gZ-h5R">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Homescreen View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomescreenViewController" customModule="LaundryQ" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homescreen_image" translatesAutoresizingMaskIntoConstraints="NO" id="ZpB-Tt-zCG">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Ssv-Fj-u57"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LaundryQ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5hY-Im-SBc">
+                                <rect key="frame" x="20" y="82" width="166" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Laundry History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzm-UG-e5N">
+                                <rect key="frame" x="22" y="335" width="152" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ga takut hilang lagi!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Klh-uD-yRN">
+                                <rect key="frame" x="20" y="124" width="156" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dT4-0I-9H2">
+                                <rect key="frame" x="22" y="374" width="370" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8y1-nK-nJ1"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="+ Add new Laundry">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="16" name="Helvetica-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="vqN-ex-em9" kind="show" id="kuH-EG-6Pb"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RRH-Cf-ST0">
+                                <rect key="frame" x="22" y="439" width="370" height="408"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LaundryHistoryCell" rowHeight="130" id="1Dn-ZA-b5n" customClass="LaundryTableViewCell" customModule="LaundryQ" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="370" height="130"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1Dn-ZA-b5n" id="vV9-uq-de9">
+                                            <rect key="frame" x="0.0" y="0.0" width="370" height="130"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yPO-Sr-oYM" userLabel="Container View">
+                                                    <rect key="frame" x="20" y="11" width="330" height="108"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7O5-QK-T7h" userLabel="Clipping View">
+                                                            <rect key="frame" x="0.0" y="0.0" width="330" height="108"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Laundry Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ym4-C8-1tg">
+                                                                    <rect key="frame" x="90" y="15" width="126" height="22"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Laundry Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALk-vJ-Khx">
+                                                                    <rect key="frame" x="90" y="74" width="116" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Laundry Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kia-ID-3V9">
+                                                                    <rect key="frame" x="90" y="47" width="91" height="17"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                                            <constraints>
+                                                                <constraint firstItem="Ym4-C8-1tg" firstAttribute="top" secondItem="7O5-QK-T7h" secondAttribute="top" constant="15" id="2EO-Wm-7fU"/>
+                                                                <constraint firstItem="kia-ID-3V9" firstAttribute="top" secondItem="Ym4-C8-1tg" secondAttribute="bottom" constant="10" id="3zV-KV-6X4"/>
+                                                                <constraint firstItem="ALk-vJ-Khx" firstAttribute="top" secondItem="kia-ID-3V9" secondAttribute="bottom" constant="10" id="ct5-dd-fnA"/>
+                                                                <constraint firstItem="ALk-vJ-Khx" firstAttribute="leading" secondItem="7O5-QK-T7h" secondAttribute="leading" constant="90" id="eRB-5U-2kS"/>
+                                                                <constraint firstItem="Ym4-C8-1tg" firstAttribute="leading" secondItem="7O5-QK-T7h" secondAttribute="leading" constant="90" id="ovS-YC-6sD"/>
+                                                                <constraint firstItem="kia-ID-3V9" firstAttribute="leading" secondItem="7O5-QK-T7h" secondAttribute="leading" constant="90" id="tDe-5Z-G5G"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="7O5-QK-T7h" secondAttribute="bottom" id="DHe-Jx-gkS"/>
+                                                        <constraint firstItem="7O5-QK-T7h" firstAttribute="leading" secondItem="yPO-Sr-oYM" secondAttribute="leading" id="P4n-wE-QyU"/>
+                                                        <constraint firstItem="7O5-QK-T7h" firstAttribute="top" secondItem="yPO-Sr-oYM" secondAttribute="top" id="dFU-4Z-nMv"/>
+                                                        <constraint firstAttribute="trailing" secondItem="7O5-QK-T7h" secondAttribute="trailing" id="ldX-Ln-vH4"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="yPO-Sr-oYM" firstAttribute="top" secondItem="vV9-uq-de9" secondAttribute="topMargin" id="4eC-zG-BxV"/>
+                                                <constraint firstItem="yPO-Sr-oYM" firstAttribute="bottom" secondItem="vV9-uq-de9" secondAttribute="bottomMargin" id="FC8-bM-GlQ"/>
+                                                <constraint firstItem="yPO-Sr-oYM" firstAttribute="leading" secondItem="vV9-uq-de9" secondAttribute="leadingMargin" id="cff-cb-f0X"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="yPO-Sr-oYM" secondAttribute="trailing" id="lIu-WJ-Qq7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="LaundryClippingView" destination="7O5-QK-T7h" id="kqD-Qx-ah1"/>
+                                            <outlet property="LaundryContainerView" destination="yPO-Sr-oYM" id="Sx7-EQ-oUq"/>
+                                            <outlet property="LaundryName" destination="Ym4-C8-1tg" id="Wcw-ba-B1C"/>
+                                            <outlet property="LaundryStatus" destination="ALk-vJ-Khx" id="PfO-m8-cyv"/>
+                                            <outlet property="LaundryTime" destination="kia-ID-3V9" id="AjF-SE-EHz"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="messageLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Wg-Hj-kxy">
+                                <rect key="frame" x="143.5" y="464" width="127" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dT4-0I-9H2" firstAttribute="top" secondItem="vzm-UG-e5N" secondAttribute="bottom" constant="15" id="0Vl-KG-uQ2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RRH-Cf-ST0" secondAttribute="trailing" constant="22" id="1zh-OA-F89"/>
+                            <constraint firstItem="dT4-0I-9H2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="5a0-qI-She"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZpB-Tt-zCG" secondAttribute="trailing" id="DP9-IM-7ft"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dT4-0I-9H2" secondAttribute="trailing" constant="22" id="Nfx-R1-stT"/>
+                            <constraint firstItem="ZpB-Tt-zCG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ODN-So-H2F"/>
+                            <constraint firstItem="RRH-Cf-ST0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="Uxy-dR-wgD"/>
+                            <constraint firstItem="RRH-Cf-ST0" firstAttribute="top" secondItem="dT4-0I-9H2" secondAttribute="bottom" constant="15" id="WSS-36-qbL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RRH-Cf-ST0" secondAttribute="bottom" constant="15" id="hvj-ef-PKq"/>
+                            <constraint firstItem="7Wg-Hj-kxy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kcY-g6-yET"/>
+                            <constraint firstItem="vzm-UG-e5N" firstAttribute="top" secondItem="ZpB-Tt-zCG" secondAttribute="bottom" constant="35" id="ppC-2j-fwd"/>
+                            <constraint firstItem="vzm-UG-e5N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="qzA-kO-cPA"/>
+                            <constraint firstItem="ZpB-Tt-zCG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="tPJ-xs-1XU"/>
+                            <constraint firstItem="7Wg-Hj-kxy" firstAttribute="top" secondItem="dT4-0I-9H2" secondAttribute="bottom" constant="40" id="vbg-b5-wkd"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="tqn-Gf-3cq"/>
+                    <connections>
+                        <outlet property="LaundryTableView" destination="RRH-Cf-ST0" id="JZO-Cn-HfL"/>
+                        <outlet property="messageLabel" destination="7Wg-Hj-kxy" id="pwr-55-QnH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="97.767857142857139"/>
+        </scene>
+        <!--New Laundry View Controller-->
+        <scene sceneID="kdv-mm-O64">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="vqN-ex-em9" customClass="NewLaundryViewController" customModule="LaundryQ" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xpP-Nq-yWf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1150"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="scrollableAxes" translatesAutoresizingMaskIntoConstraints="NO" id="mUV-Jc-6t3">
+                                <rect key="frame" x="0.0" y="140" width="414" height="976"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SY1-sO-ZRz" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Laundry Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bc1-Jc-uBH">
+                                                <rect key="frame" x="22" y="20" width="370" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0II-Hn-0HQ">
+                                                <rect key="frame" x="22" y="111" width="370" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wuj-02-U2g">
+                                                <rect key="frame" x="22" y="521" width="370" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vqN-Vd-AlY" userLabel="Laundry Name Text Field">
+                                                <rect key="frame" x="22" y="51" width="370" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="dqb-Yw-Ajv"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="8I1-Yp-uPb" userLabel="Date Picker - Start Date">
+                                                <rect key="frame" x="22" y="152" width="370" height="349"/>
+                                            </datePicker>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="5dy-Ao-O4Z" userLabel="Date Picker - End Date">
+                                                <rect key="frame" x="22" y="552" width="370" height="348.5"/>
+                                            </datePicker>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7b-yw-kTb">
+                                                <rect key="frame" x="22" y="935" width="370" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="ymc-U8-0eo"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="+ Add New Laundry">
+                                                            <attributes>
+                                                                <font key="NSFont" size="16" name="Helvetica-Bold"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="saveAction:" destination="vqN-ex-em9" eventType="touchUpInside" id="9td-CQ-OQ4"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="8I1-Yp-uPb" secondAttribute="trailing" constant="22" id="0EO-Qx-qZi"/>
+                                            <constraint firstItem="Wuj-02-U2g" firstAttribute="top" secondItem="8I1-Yp-uPb" secondAttribute="bottom" constant="20" id="1Xt-W8-Rgg"/>
+                                            <constraint firstItem="5dy-Ao-O4Z" firstAttribute="leading" secondItem="SY1-sO-ZRz" secondAttribute="leading" constant="22" id="1gH-B7-7A2"/>
+                                            <constraint firstAttribute="trailing" secondItem="0II-Hn-0HQ" secondAttribute="trailing" constant="22" id="4m6-5J-BT6"/>
+                                            <constraint firstAttribute="bottom" secondItem="v7b-yw-kTb" secondAttribute="bottom" constant="15" id="5ak-Ge-Wm1"/>
+                                            <constraint firstAttribute="height" constant="1000" id="Aej-4S-Pgr"/>
+                                            <constraint firstItem="5dy-Ao-O4Z" firstAttribute="top" secondItem="Wuj-02-U2g" secondAttribute="bottom" constant="10" id="Eeu-VA-WlK"/>
+                                            <constraint firstItem="0II-Hn-0HQ" firstAttribute="top" secondItem="vqN-Vd-AlY" secondAttribute="bottom" constant="20" id="GEB-d0-zwL"/>
+                                            <constraint firstItem="vqN-Vd-AlY" firstAttribute="leading" secondItem="SY1-sO-ZRz" secondAttribute="leading" constant="22" id="Gw9-Bq-2VS"/>
+                                            <constraint firstItem="v7b-yw-kTb" firstAttribute="leading" secondItem="SY1-sO-ZRz" secondAttribute="leading" constant="22" id="ITj-eg-3lJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="Wuj-02-U2g" secondAttribute="trailing" constant="22" id="KMu-Nu-cbh"/>
+                                            <constraint firstAttribute="trailing" secondItem="bc1-Jc-uBH" secondAttribute="trailing" constant="22" id="Ucs-Hy-sTJ"/>
+                                            <constraint firstItem="bc1-Jc-uBH" firstAttribute="top" secondItem="SY1-sO-ZRz" secondAttribute="top" constant="20" id="Udu-Wn-WfW"/>
+                                            <constraint firstItem="8I1-Yp-uPb" firstAttribute="leading" secondItem="SY1-sO-ZRz" secondAttribute="leading" constant="22" id="VD7-Cw-mBH"/>
+                                            <constraint firstAttribute="trailing" secondItem="vqN-Vd-AlY" secondAttribute="trailing" constant="22" id="bCb-hh-fx9"/>
+                                            <constraint firstItem="0II-Hn-0HQ" firstAttribute="leading" secondItem="SY1-sO-ZRz" secondAttribute="leading" constant="22" id="bpY-5g-yy4"/>
+                                            <constraint firstAttribute="trailing" secondItem="5dy-Ao-O4Z" secondAttribute="trailing" constant="22" id="cNx-w1-T6O"/>
+                                            <constraint firstItem="bc1-Jc-uBH" firstAttribute="leading" secondItem="SY1-sO-ZRz" secondAttribute="leading" constant="22" id="dGG-RZ-eDI"/>
+                                            <constraint firstItem="Wuj-02-U2g" firstAttribute="leading" secondItem="SY1-sO-ZRz" secondAttribute="leading" constant="22" id="dZi-oV-g45"/>
+                                            <constraint firstItem="8I1-Yp-uPb" firstAttribute="top" secondItem="0II-Hn-0HQ" secondAttribute="bottom" constant="20" id="hzW-R7-cmj"/>
+                                            <constraint firstItem="vqN-Vd-AlY" firstAttribute="top" secondItem="bc1-Jc-uBH" secondAttribute="bottom" constant="10" id="uE9-CJ-MWC"/>
+                                            <constraint firstAttribute="trailing" secondItem="v7b-yw-kTb" secondAttribute="trailing" constant="22" id="uzY-q9-TON"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="SY1-sO-ZRz" secondAttribute="bottom" id="LnI-ee-FVo"/>
+                                    <constraint firstItem="SY1-sO-ZRz" firstAttribute="leading" secondItem="mUV-Jc-6t3" secondAttribute="leading" id="jWR-Eo-sBZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="SY1-sO-ZRz" secondAttribute="trailing" id="qlg-dG-Ql9"/>
+                                    <constraint firstItem="SY1-sO-ZRz" firstAttribute="top" secondItem="mUV-Jc-6t3" secondAttribute="top" id="rMJ-Uh-o9p"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lqt-9y-No1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SY1-sO-ZRz" firstAttribute="width" secondItem="lqt-9y-No1" secondAttribute="width" id="7gl-gq-rff"/>
+                            <constraint firstItem="mUV-Jc-6t3" firstAttribute="top" secondItem="lqt-9y-No1" secondAttribute="top" id="89h-5K-R5N"/>
+                            <constraint firstItem="mUV-Jc-6t3" firstAttribute="leading" secondItem="lqt-9y-No1" secondAttribute="leading" id="M23-9C-fXe"/>
+                            <constraint firstItem="lqt-9y-No1" firstAttribute="bottom" secondItem="mUV-Jc-6t3" secondAttribute="bottom" id="SF4-6T-eTF"/>
+                            <constraint firstItem="lqt-9y-No1" firstAttribute="trailing" secondItem="mUV-Jc-6t3" secondAttribute="trailing" id="q7m-cL-FN3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cJn-Gi-EXt"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="414" height="1150"/>
+                    <connections>
+                        <outlet property="endDate" destination="5dy-Ao-O4Z" id="IId-PS-i0H"/>
+                        <outlet property="laundryName" destination="vqN-Vd-AlY" id="CFm-Ka-kCA"/>
+                        <outlet property="startDate" destination="8I1-Yp-uPb" id="deY-Mz-E7d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NPj-ph-hMm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1728.985507246377" y="97.767857142857139"/>
+        </scene>
+        <!--Laundry Detail View Controller-->
+        <scene sceneID="9KV-3J-nGT">
+            <objects>
+                <viewController id="g5u-RV-da1" customClass="LaundryDetailViewController" customModule="LaundryQ" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZIR-6v-KUS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sfR-v7-wTr" userLabel="Container View">
+                                <rect key="frame" x="22" y="54" width="370" height="280"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tKr-PQ-noa" userLabel="Clipping View">
+                                        <rect key="frame" x="0.0" y="0.0" width="370" height="280"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Laundry Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuH-1v-0Gf">
+                                                <rect key="frame" x="15" y="20" width="121" height="22"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Laundry Kost Ehouse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHn-EL-8I7">
+                                                <rect key="frame" x="15" y="47" width="135" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Date - End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pjF-Tl-y8N">
+                                                <rect key="frame" x="15" y="84" width="176" height="22"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Feb 2022 - 12 Feb 2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2P-LQ-Qra">
+                                                <rect key="frame" x="15" y="111" width="172" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBf-yL-Abl">
+                                                <rect key="frame" x="15" y="148" width="54" height="22"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On progress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8j-Fe-J14">
+                                                <rect key="frame" x="15" y="175" width="79" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#Items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJr-T0-5c5">
+                                                <rect key="frame" x="15" y="212" width="57" height="22"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lX3-Cd-QHd">
+                                                <rect key="frame" x="15" y="239" width="48" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.36078431372549019" green="0.58431372549019611" blue="1" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="SJr-T0-5c5" firstAttribute="leading" secondItem="tKr-PQ-noa" secondAttribute="leading" constant="15" id="3Vn-dq-jj1"/>
+                                            <constraint firstItem="lX3-Cd-QHd" firstAttribute="top" secondItem="SJr-T0-5c5" secondAttribute="bottom" constant="5" id="A2s-1I-AZr"/>
+                                            <constraint firstItem="k8j-Fe-J14" firstAttribute="top" secondItem="MBf-yL-Abl" secondAttribute="bottom" constant="5" id="Hbt-1r-Kr9"/>
+                                            <constraint firstItem="MBf-yL-Abl" firstAttribute="top" secondItem="f2P-LQ-Qra" secondAttribute="bottom" constant="20" id="Ntn-1c-1eX"/>
+                                            <constraint firstItem="SJr-T0-5c5" firstAttribute="top" secondItem="k8j-Fe-J14" secondAttribute="bottom" constant="20" id="WrN-iv-Ra4"/>
+                                            <constraint firstItem="MBf-yL-Abl" firstAttribute="leading" secondItem="tKr-PQ-noa" secondAttribute="leading" constant="15" id="ZZj-9i-nz9"/>
+                                            <constraint firstItem="kuH-1v-0Gf" firstAttribute="leading" secondItem="tKr-PQ-noa" secondAttribute="leading" constant="15" id="dHZ-OP-gno"/>
+                                            <constraint firstItem="f2P-LQ-Qra" firstAttribute="top" secondItem="pjF-Tl-y8N" secondAttribute="bottom" constant="5" id="gSr-Ff-BQ2"/>
+                                            <constraint firstItem="pjF-Tl-y8N" firstAttribute="leading" secondItem="tKr-PQ-noa" secondAttribute="leading" constant="15" id="nKO-zI-e7q"/>
+                                            <constraint firstItem="CHn-EL-8I7" firstAttribute="leading" secondItem="tKr-PQ-noa" secondAttribute="leading" constant="15" id="oVv-kH-Esq"/>
+                                            <constraint firstItem="CHn-EL-8I7" firstAttribute="top" secondItem="kuH-1v-0Gf" secondAttribute="bottom" constant="5" id="q8E-bv-3TS"/>
+                                            <constraint firstItem="lX3-Cd-QHd" firstAttribute="leading" secondItem="tKr-PQ-noa" secondAttribute="leading" constant="15" id="qCP-te-YjW"/>
+                                            <constraint firstItem="f2P-LQ-Qra" firstAttribute="leading" secondItem="tKr-PQ-noa" secondAttribute="leading" constant="15" id="toY-Oy-4ts"/>
+                                            <constraint firstItem="pjF-Tl-y8N" firstAttribute="top" secondItem="CHn-EL-8I7" secondAttribute="bottom" constant="20" id="ufO-0d-eE7"/>
+                                            <constraint firstItem="kuH-1v-0Gf" firstAttribute="top" secondItem="tKr-PQ-noa" secondAttribute="top" constant="20" id="xXS-S1-wQ4"/>
+                                            <constraint firstItem="k8j-Fe-J14" firstAttribute="leading" secondItem="tKr-PQ-noa" secondAttribute="leading" constant="15" id="zli-Tv-4Ki"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="tKr-PQ-noa" secondAttribute="bottom" id="C4E-CX-Xov"/>
+                                    <constraint firstItem="tKr-PQ-noa" firstAttribute="leading" secondItem="sfR-v7-wTr" secondAttribute="leading" id="GwI-cd-mQe"/>
+                                    <constraint firstAttribute="height" constant="280" id="IdM-Ra-efa"/>
+                                    <constraint firstItem="tKr-PQ-noa" firstAttribute="top" secondItem="sfR-v7-wTr" secondAttribute="top" id="hcb-1N-FSx"/>
+                                    <constraint firstAttribute="trailing" secondItem="tKr-PQ-noa" secondAttribute="trailing" id="zmX-RT-7Ek"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNV-wC-5fO">
+                                <rect key="frame" x="22" y="364" width="71" height="22"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xdb-Kk-bWH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YNV-wC-5fO" firstAttribute="leading" secondItem="xdb-Kk-bWH" secondAttribute="leading" constant="22" id="T1R-Hc-p6f"/>
+                            <constraint firstItem="sfR-v7-wTr" firstAttribute="leading" secondItem="xdb-Kk-bWH" secondAttribute="leading" constant="22" id="cAV-Fp-VHv"/>
+                            <constraint firstItem="xdb-Kk-bWH" firstAttribute="trailing" secondItem="sfR-v7-wTr" secondAttribute="trailing" constant="22" id="e77-x9-K4q"/>
+                            <constraint firstItem="YNV-wC-5fO" firstAttribute="top" secondItem="sfR-v7-wTr" secondAttribute="bottom" constant="30" id="e8L-sR-rSt"/>
+                            <constraint firstItem="sfR-v7-wTr" firstAttribute="top" secondItem="xdb-Kk-bWH" secondAttribute="top" constant="10" id="iBs-2h-P6t"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nH3-g2-N8C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2510" y="98"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lnl-96-Cfo">
+            <objects>
+                <viewController id="z6P-W9-20N" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lyZ-cw-j9c">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="D0x-Ur-gWC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mQv-TG-GxV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3299" y="98"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kFs-Yp-eSI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CqQ-gZ-h5R" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="mJr-31-Emd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="nDZ-Xz-nww"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kVE-1b-QHF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="97.767857142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="homescreen_image" width="8256" height="5504"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

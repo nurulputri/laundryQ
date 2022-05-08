@@ -17,6 +17,15 @@
 		6029D9BF282613BC00F04FCB /* LaundryQTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6029D9BE282613BC00F04FCB /* LaundryQTests.swift */; };
 		6029D9C9282613BC00F04FCB /* LaundryQUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6029D9C8282613BC00F04FCB /* LaundryQUITests.swift */; };
 		6029D9CB282613BC00F04FCB /* LaundryQUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6029D9CA282613BC00F04FCB /* LaundryQUITestsLaunchTests.swift */; };
+		6029D9D828261CB300F04FCB /* HomescreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6029D9D728261CB300F04FCB /* HomescreenViewController.swift */; };
+		6029D9DA28261CD700F04FCB /* NewLaundryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6029D9D928261CD700F04FCB /* NewLaundryViewController.swift */; };
+		6029D9DC282633A300F04FCB /* LaundryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6029D9DB282633A300F04FCB /* LaundryDetailViewController.swift */; };
+		60458CF428276D3A00E1CD87 /* HomescreenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60458CF328276D3A00E1CD87 /* HomescreenTableViewController.swift */; };
+		607FC9BC2826ACED0002C846 /* LaundryItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FC9B82826ACED0002C846 /* LaundryItem+CoreDataClass.swift */; };
+		607FC9BD2826ACED0002C846 /* LaundryItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FC9B92826ACED0002C846 /* LaundryItem+CoreDataProperties.swift */; };
+		607FC9BE2826ACED0002C846 /* Laundry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FC9BA2826ACED0002C846 /* Laundry+CoreDataClass.swift */; };
+		607FC9BF2826ACED0002C846 /* Laundry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FC9BB2826ACED0002C846 /* Laundry+CoreDataProperties.swift */; };
+		607FC9C12826B28F0002C846 /* LaundryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FC9C02826B28F0002C846 /* LaundryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +60,15 @@
 		6029D9C4282613BC00F04FCB /* LaundryQUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaundryQUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6029D9C8282613BC00F04FCB /* LaundryQUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryQUITests.swift; sourceTree = "<group>"; };
 		6029D9CA282613BC00F04FCB /* LaundryQUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryQUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6029D9D728261CB300F04FCB /* HomescreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomescreenViewController.swift; sourceTree = "<group>"; };
+		6029D9D928261CD700F04FCB /* NewLaundryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLaundryViewController.swift; sourceTree = "<group>"; };
+		6029D9DB282633A300F04FCB /* LaundryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryDetailViewController.swift; sourceTree = "<group>"; };
+		60458CF328276D3A00E1CD87 /* HomescreenTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomescreenTableViewController.swift; sourceTree = "<group>"; };
+		607FC9B82826ACED0002C846 /* LaundryItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LaundryItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		607FC9B92826ACED0002C846 /* LaundryItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LaundryItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		607FC9BA2826ACED0002C846 /* Laundry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Laundry+CoreDataClass.swift"; sourceTree = "<group>"; };
+		607FC9BB2826ACED0002C846 /* Laundry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Laundry+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		607FC9C02826B28F0002C846 /* LaundryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +119,20 @@
 		6029D9A3282613BA00F04FCB /* LaundryQ */ = {
 			isa = PBXGroup;
 			children = (
+				607365052826FB5C008E0139 /* Laundry */,
 				6029D9A4282613BA00F04FCB /* AppDelegate.swift */,
 				6029D9A6282613BA00F04FCB /* SceneDelegate.swift */,
 				6029D9A8282613BA00F04FCB /* ViewController.swift */,
+				6029D9D728261CB300F04FCB /* HomescreenViewController.swift */,
+				6029D9D928261CD700F04FCB /* NewLaundryViewController.swift */,
+				6029D9DB282633A300F04FCB /* LaundryDetailViewController.swift */,
 				6029D9AA282613BA00F04FCB /* Main.storyboard */,
 				6029D9B0282613BC00F04FCB /* Assets.xcassets */,
 				6029D9B2282613BC00F04FCB /* LaunchScreen.storyboard */,
 				6029D9B5282613BC00F04FCB /* Info.plist */,
 				6029D9AD282613BA00F04FCB /* LaundryQ.xcdatamodeld */,
+				607FC9C02826B28F0002C846 /* LaundryTableViewCell.swift */,
+				60458CF328276D3A00E1CD87 /* HomescreenTableViewController.swift */,
 			);
 			path = LaundryQ;
 			sourceTree = "<group>";
@@ -128,6 +152,17 @@
 				6029D9CA282613BC00F04FCB /* LaundryQUITestsLaunchTests.swift */,
 			);
 			path = LaundryQUITests;
+			sourceTree = "<group>";
+		};
+		607365052826FB5C008E0139 /* Laundry */ = {
+			isa = PBXGroup;
+			children = (
+				607FC9B82826ACED0002C846 /* LaundryItem+CoreDataClass.swift */,
+				607FC9B92826ACED0002C846 /* LaundryItem+CoreDataProperties.swift */,
+				607FC9BA2826ACED0002C846 /* Laundry+CoreDataClass.swift */,
+				607FC9BB2826ACED0002C846 /* Laundry+CoreDataProperties.swift */,
+			);
+			path = Laundry;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,10 +296,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6029D9D828261CB300F04FCB /* HomescreenViewController.swift in Sources */,
+				60458CF428276D3A00E1CD87 /* HomescreenTableViewController.swift in Sources */,
 				6029D9A9282613BA00F04FCB /* ViewController.swift in Sources */,
 				6029D9AF282613BA00F04FCB /* LaundryQ.xcdatamodeld in Sources */,
+				607FC9BE2826ACED0002C846 /* Laundry+CoreDataClass.swift in Sources */,
 				6029D9A5282613BA00F04FCB /* AppDelegate.swift in Sources */,
+				607FC9BF2826ACED0002C846 /* Laundry+CoreDataProperties.swift in Sources */,
+				607FC9BC2826ACED0002C846 /* LaundryItem+CoreDataClass.swift in Sources */,
+				607FC9C12826B28F0002C846 /* LaundryTableViewCell.swift in Sources */,
+				6029D9DC282633A300F04FCB /* LaundryDetailViewController.swift in Sources */,
 				6029D9A7282613BA00F04FCB /* SceneDelegate.swift in Sources */,
+				607FC9BD2826ACED0002C846 /* LaundryItem+CoreDataProperties.swift in Sources */,
+				6029D9DA28261CD700F04FCB /* NewLaundryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
