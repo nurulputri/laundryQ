@@ -66,6 +66,9 @@ class HomescreenViewController: UIViewController, NSFetchedResultsControllerDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        LaundryTableView.dataSource = self
+        LaundryTableView.separatorStyle = .none
+        
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
         
@@ -132,6 +135,12 @@ class HomescreenViewController: UIViewController, NSFetchedResultsControllerDele
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func formatDate(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMM yyy"
+        return dateFormatter.string(from: date)
+    }
 
 }
 
@@ -139,10 +148,6 @@ extension HomescreenViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return laundryList.count
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -152,9 +157,11 @@ extension HomescreenViewController: UITableViewDataSource {
         laundry = laundryList[indexPath.row]
         print("nih mau render laundry:", laundry)
         
-        cell.LaundryName.text = laundry.laundryName
-        cell.LaundryTime.text = "\(laundry.startDate) - \(laundry.endDate)"
+        cell.LaundryName.text = laundry.laundryName!
+//        cell.LaundryTime.text = "\(laundry.startDate!) - \(laundry.endDate!)"
+        cell.LaundryTime.text = formatDate(date: laundry.startDate!) + " - " + formatDate(date: laundry.endDate!)
         cell.LaundryStatus.text = laundry.status
+        cell.LaundryItemCount.text = "\(laundry.items!.count)"
         
         return cell
     }
@@ -163,6 +170,8 @@ extension HomescreenViewController: UITableViewDataSource {
         self.setupView()
 
         print("sekarang:", laundryList)
+        print("test nama laundry:", laundryList[0].laundryName!)
+        print("test startDate laundry:", laundryList[0].startDate!)
         print(LaundryTableView.isHidden)
         LaundryTableView.reloadData()
     }

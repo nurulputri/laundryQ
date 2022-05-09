@@ -18,9 +18,27 @@ class LaundryTableViewCell: UITableViewCell {
         }
     }
     
+    @IBOutlet weak var CircleContainerView: UIView! {
+        didSet {
+            CircleContainerView.layer.cornerRadius = CircleContainerView.frame.size.width/2
+            CircleContainerView.clipsToBounds = true
+            CircleContainerView.layer.shadowOpacity = 0.3
+            CircleContainerView.layer.shadowRadius = 2
+            CircleContainerView.layer.shadowOffset = CGSize(width: 1, height: 1)
+        }
+    }
+    
+    @IBOutlet weak var CircleClippingView: UIView! {
+        didSet {
+            CircleClippingView.layer.cornerRadius = 10
+            CircleClippingView.layer.masksToBounds = true
+        }
+    }
+    
     @IBOutlet weak var LaundryName: UILabel!
     @IBOutlet weak var LaundryTime: UILabel!
     @IBOutlet weak var LaundryStatus: UILabel!
+    @IBOutlet weak var LaundryItemCount: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
