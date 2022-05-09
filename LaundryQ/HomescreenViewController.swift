@@ -6,6 +6,8 @@ var laundryList = [Laundry]()
 // class HomescreenViewController: UIViewController, NSFetchedResultsControllerDelegate, UITableViewController {
 class HomescreenViewController: UIViewController, NSFetchedResultsControllerDelegate {
 
+    var firstLoad = true
+    
 //    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 //
 //    private let persistentContainer = NSPersistentContainer(name: "Laundry")
@@ -29,11 +31,24 @@ class HomescreenViewController: UIViewController, NSFetchedResultsControllerDele
     @IBOutlet weak var LaundryTableView: UITableView!
     @IBOutlet weak var messageLabel: UILabel!
     
-//    var allLaundrys = [Laundry]() {
-//        didSet {
-//            updateView()
-//        }
-//    }
+    @IBAction func deleteAllAction(_ sender: Any) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Laundry")
+        fetchRequest.returnsObjectsAsFaults = false
+
+        do {
+            let results = try context.fetch(fetchRequest)
+            for managedObject in results {
+                let managedObjectData:NSManagedObject = managedObject as! NSManagedObject
+                context.delete(managedObjectData)
+                try context.save()
+            }
+        } catch let error as NSError {
+            print("Detele all data error")
+        }
+    }
+
     
     private func setupMessageLabel() {
         messageLabel.text = "You don't have any laundry yet."
@@ -41,10 +56,6 @@ class HomescreenViewController: UIViewController, NSFetchedResultsControllerDele
 
     private func updateView() {
         var hasLaundry = false
-
-//        if let allLaundrys = fetchedResultsController.fetchedObjects {
-//            hasLaundry = allLaundrys.count > 0
-//        }
         
         if laundryList.count > 0 {
             hasLaundry = true
@@ -69,24 +80,44 @@ class HomescreenViewController: UIViewController, NSFetchedResultsControllerDele
         LaundryTableView.dataSource = self
         LaundryTableView.separatorStyle = .none
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+//        // untuk debugging
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+//
+//        let entity = NSEntityDescription.entity(forEntityName: "Laundry", in: context)
+//
+//        let abcLaundry = Laundry(entity: entity!, insertInto: context)
+//        abcLaundry.laundryName = "AAA"
+//        abcLaundry.startDate = Date()
+//        abcLaundry.endDate = Date()
+//        abcLaundry.status = "On Progress"
         
-        let entity = NSEntityDescription.entity(forEntityName: "Laundry", in: context)
+//        do {
+//            try context.save()
+//            laundryList.append(abcLaundry)
+//        }
+//        catch {
+//            // error
+//            print("context save error")
+//        }
         
-        let abcLaundry = Laundry(entity: entity!, insertInto: context)
-        abcLaundry.laundryName = "AAA"
-        abcLaundry.startDate = Date()
-        abcLaundry.endDate = Date()
-        abcLaundry.status = "On Progress"
-        
-        do {
-            try context.save()
-            laundryList.append(abcLaundry)
-        }
-        catch {
-            // error
-            print("context save error")
+        if firstLoad {
+            firstLoad = false
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Laundry")
+            request.sortDescriptors = [NSSortDescriptor(key: "startDate", ascending: false)]
+            
+            do {
+                let results:NSArray = try context.fetch(request) as NSArray
+                for result in results {
+                    let laundry = result as! Laundry
+                    laundryList.append(laundry)
+                }
+            }
+            catch {
+                print("Fetch failed.")
+            }
         }
         
         self.setupView()
@@ -157,7 +188,7 @@ extension HomescreenViewController: UITableViewDataSource {
         laundry = laundryList[indexPath.row]
         print("nih mau render laundry:", laundry)
         
-        cell.LaundryName.text = laundry.laundryName!
+        cell.LaundryName.text = laundry.laundryName
 //        cell.LaundryTime.text = "\(laundry.startDate!) - \(laundry.endDate!)"
         cell.LaundryTime.text = formatDate(date: laundry.startDate!) + " - " + formatDate(date: laundry.endDate!)
         cell.LaundryStatus.text = laundry.status
@@ -168,11 +199,7 @@ extension HomescreenViewController: UITableViewDataSource {
     
     override func viewDidAppear(_ animated: Bool) {
         self.setupView()
-
-        print("sekarang:", laundryList)
-        print("test nama laundry:", laundryList[0].laundryName!)
-        print("test startDate laundry:", laundryList[0].startDate!)
-        print(LaundryTableView.isHidden)
+        
         LaundryTableView.reloadData()
     }
 }
